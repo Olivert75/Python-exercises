@@ -84,10 +84,39 @@ print (negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
 
+two_or_more_digits = [i for i in numbers if i > 9 or i < -9]
+print (two_or_more_digits)
+
 # Exercise 15 - Make a variable named numbers_squared that contains the numbers list with each element squared. Output is [4, 9, 16, etc...]
+
+numbers_squared = [i ** 2 for i in numbers]
+print (numbers_squared)
 
 # Exercise 16 - Make a variable named odd_negative_numbers that contains only the numbers that are both odd and negative.
 
+odd_negative_numbers = [i for i in numbers if i %2 != 0 and i < 0]
+print (odd_negative_numbers)
+
 # Exercise 17 - Make a variable named numbers_plus_5. In it, return a list containing each number plus five. 
 
+numbers_plus_5 = [i + 5 for i in numbers]
+print (numbers_plus_5)
+
 # BONUS Make a variable named "primes" that is a list containing the prime numbers in the numbers list. *Hint* you may want to make or find a helper function that determines if a given number is prime or not.
+
+def is_prime(num):
+    if type(num) != int:
+        return False
+    if num <= 0:
+        return False
+    if num == 1:
+        return False
+    if num >= 2:
+        for i in range (2, num):
+            if num % i == 0:
+                return False
+        return True
+
+prime_num = [i for i in numbers if is_prime(i)]
+
+print (prime_num)
