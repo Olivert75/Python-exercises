@@ -13,7 +13,7 @@ else:
 
 user_input = input('What day is today?').lower() 
 
-if user_input in ["Saturday", "Sunday"]:
+if user_input in ["saturday", "sunday"]:
     print("Finally It's the Weekend!")
 else:
     print('It is a weekday')
@@ -285,7 +285,59 @@ while True:
 #Bonus
 
 #Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+while True:
+    try:
+        grade = input("Enter a numerical grade: ")
+        letter_grade = ["A", "B", "C", "D", "F"]
+        print ("Grade Range: ")
+        if grade.isdigit and 0 <=  int(grade) <= 100:
+            if int(grade) >= 88 and int(grade) <= 100:
+                print(f'{letter_grade[0]} : {grade}')
+            elif int(grade) >= 80 and int(grade) <= 87:
+                print(f'{letter_grade[1]} : {grade}')
+            elif int(grade) >= 67 and int(grade) <= 79:
+                print(f'{letter_grade[2]} : {grade}')
+            elif int(grade) >= 60 and int(grade) <= 66:
+                print(f'{letter_grade[-2]} : {grade}')
+            else:
+                print(f'{letter_grade[-1]} : {grade}')
+            if input("Do you want to continue: Y/N ?").lower() in ["yes", "y"]:
+                continue
+            else:
+                break
+    except(ValueError): 
+        break
 
-#Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
-
+#Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. 
+#Loop through the list and print out information about each book.
 #Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+
+books = [
+    {"Title" : "The hobbit, or There and Back Again",
+    "Author" : "J.R.R.Tolkien",
+    "Genre" : "fantasy fiction"},
+
+    {"Title" : "to kill a mockingbird",
+    "Author" : "harper lee",
+    "Genre" : "thriller"},
+
+    {"Title" : "the help",
+    "Author" : "kathryn stockett",
+    "Genre" : "historical fiction"}
+]
+
+book_genre = input("Enter a genre you like").lower()
+genre_lst = []
+
+#Append the all the genre in books into genre list
+for i in books:
+    genre_lst.append(i["Genre"])
+
+#Look into the list for specific genre
+while True:
+    if book_genre.lower() in genre_lst:
+        print(i["Title"].lower())
+        break
+    else:
+        print("No books in that genre, try something else")
+        break
