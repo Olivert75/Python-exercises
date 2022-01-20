@@ -181,21 +181,19 @@ for i in range (1,10):
 #Here is an odd number: 47
 #Here is an odd number: 49
 
-num = 0 
-while num not in range (1,50,2):
-    while True:
-        try:
-            num = int(input("Please enter a number: "))
+while True:
+    num = input("please enter a number")
+    if num.isdigit():
+        if int(num) % 2 != 0 and int(num) <=50:
             break
-        except(ValueError):
-            break
-print("Number to skip is: ", num)
+        
+num = int(num)
 
 for i in range (1, 50, 2):
-    if i != num:
-        print ("Here is an odd number: ", i)
-    else: 
+    if i == num:
         print("Yikes! Skipping number:", num)
+    else: 
+        print ("Here is an odd number: ", i)
 
 #The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a loop that counts from 0 to that number. 
 #(Hints: first make sure that the value the user entered is a valid number, also note that the input function returns a string, so you'll need to convert this to a numeric type.)
