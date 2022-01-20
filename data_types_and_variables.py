@@ -46,7 +46,7 @@ noItems = 2
 
 offer = currentOffer and (noItems > 2 or premiumMem)
 
-print(offer)
+print(offer) 
 
 #Create a variable that holds a boolean value for each of the following conditions:
 #the password must be at least 5 characters
