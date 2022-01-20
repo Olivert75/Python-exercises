@@ -188,7 +188,7 @@ while num not in range (1,50,2):
             num = int(input("Please enter a number: "))
             break
         except(ValueError):
-            continue
+            break
 print("Number to skip is: ", num)
 
 for i in range (1, 50, 2):
@@ -226,7 +226,7 @@ for i in range (int(num), 0, -1):
 #For numbers which are multiples of both three and five print "FizzBuzz".
 
 for i in range(1,101):
-    if i % 5 == 0 and n % 3 == 0:
+    if i % 5 == 0 and i % 3 == 0:
         print('FizzBuzz')
     elif i % 5 == 0:
         print('Buzz')
@@ -253,6 +253,20 @@ for i in range(1,101):
 #4      | 16      | 64
 #5      | 25      | 125
 
+while True: 
+    try:
+        num = input("Please enter a number: ")
+        if num.isdigit:
+            print (f'Number | Squared | Cubed')
+            print(f'------ | ------- | -----')
+            for i in range (-1, int(num) + 1):
+                print(f'{i:<6} | {i**2:<7} | {i**3:<5}')
+            if input("Do you want to continue: Y/N ?").lower() in ["yes", "y"]:
+                continue
+            else:
+                break
+    except(ValueError):
+        raise Exception("Sorry, you weren't enter a number")
 
 #Convert given number grades into letter grades.
 
