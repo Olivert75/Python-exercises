@@ -1,3 +1,105 @@
+#Identify the data type of the following values:
+type (99.9)
+
+type("False")
+
+type(False)
+
+type('0')
+
+type(0)
+
+type(True)
+
+type('True')
+
+type([{}])
+
+type({'a':[]})
+
+# What data type would best represent:
+"""""
+A term or phrase typed into a search box? String
+If a user is logged in? boolean
+A discount amount to apply to a user's shopping cart? float
+Whether or not a coupon code is valid? boolean
+An email address typed into a registration form? string
+The price of a product? float
+A Matrix? list
+The email addresses collected from a registration form? string
+Information about applicants to Codeup's data science program? string
+"""
+
+#For each of the following code blocks, read the expression and predict what the result of evaluating it would be, 
+#then execute the expression in your Python REPL.
+"""
+# I will get an error because we are adding a string with a number  
+'1' + 2
+
+#  2
+6 % 4
+
+# int
+type(6 % 4)
+
+# string
+type(type(6 % 4))
+
+#  Error beause + 
+'3 + 4 is ' + 3 + 4
+
+# False
+0 < 0
+
+# False
+'False' == False
+
+# False
+True == 'True'
+
+# True
+5 >= -5
+
+# True
+True or "42"
+
+# 1
+6 % 5
+
+# False
+5 < 4 and 1 == 1
+
+# False
+'codeup' == 'codeup' and 'codeup' == 'Codeup'
+
+# True
+4 >= 0 and 1 !== '1'
+
+# True
+6 % 3 == 0
+
+# True
+5 % 2 != 0
+
+# error
+[1] + 2
+
+# [1,2]
+[1] + [2]
+
+# error
+[1] * 2
+
+# [2]
+[1] * [2]
+
+#true
+[] + [] == []
+
+# error
+{} + {}
+"""
+
 #You have rented some movies for your kids: The little mermaid (for 3 days), Brother Bear (for 5 days, they love it), 
 # and Hercules (1 day, you don't know yet if they're going to like it). 
 # If price for a movie per day is 3 dollars, how much will you have to pay?
