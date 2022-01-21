@@ -118,5 +118,4 @@ def twelveto24(time):
         time = str(int(time[:2]) + 12) + time[2:8]
         return time
 
-twelveto24("8:00AM")
 #Create a function named col_index. It should accept a spreadsheet column name, and return the index number of the column.
