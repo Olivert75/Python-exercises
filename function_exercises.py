@@ -14,10 +14,11 @@ def is_vowel(letter_type):
 #Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this.
 
 def is_consonant(letter):
-    if is_vowel(letter):
-        return False
+    if type(letter) == str:
+        only_letter = letter.isalpha()
+        return only_letter and not is_vowel(letter)
     else:
-        return True
+        False
 
 #Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if the word starts with a consonant.
 
