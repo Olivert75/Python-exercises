@@ -1,10 +1,7 @@
 #Define a function named is_two. It should accept one input and return True if the passed input is either the number or the string 2, False otherwise.
 
-from functools import total_ordering
-
-
 def is_two(num):
-    if x == 2 or x == "2"
+    if x == 2 or x == "2":
         return True
     else:
         return False
@@ -14,7 +11,6 @@ def is_two(num):
 def is_vowel(letter_type):
     return letter_type.lower() in ['a', 'e', 'i', 'o', 'u']
 
-is_vowel("r")
 #Define a function named is_consonant. It should return True if the passed string is a consonant, False otherwise. Use your is_vowel function to accomplish this.
 
 def is_consonant(letter):
@@ -97,7 +93,6 @@ def normalize_name(rm_char):
     
     return result
 
-normalize_name("First Name")
 #Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 #cumulative_sum([1, 1, 1]) returns [1, 2, 3]
 #cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
@@ -107,23 +102,21 @@ def cumulative_sum(lst):
         lst[i] += sum(lst[i -1:i])
     return lst
 
-#Additional Functions Exercise
-
-#Comment each line of your function with an explanation of what that line is doing. Make sure to document both the type of all function parameters and the type that will be returned from the function. 
-#Also be sure to use the vocabulary we've introduced to describe your python code appropriately.
-#Walk us through how the function executes using the comments you wrote and several different example inputs that demonstrate all the possible paths through your function.
-
-#When we pass "Darden", the conditional will evaluate to True and the first branch of the if statement will be followed. 
-#The message variable will be created such that it has the required message from the problem specification. 
-#The message variable is returned from the function and the return value is passed to the print function. 
-#We will see "Darden is the name of my class" printed in our console/notebook.
-
-#When we pass "World", the conditional will evaluate to False and the second branch of the conditional will be taken. 
-#The message variable will hold "Hello, World!" and that value will be returned from the function. 
-#The return value will be passed to the print statement and we will see "Hello, World!" in our console/notebook.
-
 #Bonus
 
 #Create a function named twelveto24. It should accept a string in the format 10:45am or 4:30pm and return a string that is the representation of the time in a 24-hour format. Bonus write a function that does the opposite.
+def twelveto24(time):
+    #Check the last two element of the time is am and first two element is 12
+    if time[-2:] == "am" and time[:2] == "12":
+        return "00" + time[2:-2]
+    #remove am
+    elif time[:-2] == "am" and time[:2] != "12":
+        return time[:-2]
+    elif time[-2:] == "pm" and time[:2] == "12":
+        return time[:-2]
+    else:
+        time = str(int(time[:2]) + 12) + time[2:8]
+        return time
 
+twelveto24("8:00AM")
 #Create a function named col_index. It should accept a spreadsheet column name, and return the index number of the column.
