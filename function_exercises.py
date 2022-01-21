@@ -27,7 +27,6 @@ def cap_first_letter(word):
     else:
         return word
 
-cap_first_letter("hddwyw")
 #Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
 
 def calculate_tip(tips_percentage, bill_total):
